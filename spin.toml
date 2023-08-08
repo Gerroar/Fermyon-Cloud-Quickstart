@@ -1,0 +1,15 @@
+spin_manifest_version = "1"
+authors = ["Gerroar <germanariasrodriguez@gmail.com>"]
+description = "Application using JavaScript Spin application"
+name = "hello_javaascript"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "hello-javaascript"
+source = "target/hello-javaascript.wasm"
+exclude_files = ["**/node_modules"]
+[component.trigger]
+route = "/..."
+[component.build]
+command = "npm run build"
